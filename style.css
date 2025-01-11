@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    background-color: rgb(242, 252, 255);
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.heading {
+    text-align: center;
+}
+
+hr {
+    height: 5px;
+    background-color: rgb(60, 65, 70);
+}
+
+header {
+    background-color: rgb(150, 160, 175);
+    padding: 25px;
+}
+
+.logo {
+    height: 75px;
+    width: 75px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.navbar {
+    background-color: rgb(60, 65, 70);
+    height: 50px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    margin-left: 39%;
+}
+
+.navbar li {
+    float: left;
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #000000;
+}
+
+.doormat {
+    color: rgb(232, 234, 237);
+    text-decoration: none;
+}
+
+.doormat:hover{
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+}
+
+.hyperlink {
+    padding: 5px;
+    text-align: left;
+}
+
+.hyperlink:hover {
+    color: deepskyblue;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    clear: both;
+    background-color: rgb(150, 160, 175);
+    padding-bottom: 320px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+}
+
+#summary {
+    width: 35%;
+    text-align: left;
+    float: left;
+    padding: 10px;
+    padding-right: 80px;
+    padding-left: 20px;
+}
+
+#call-to-action {
+    width: 15%;
+    text-align: left;
+    float: left;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+#contact {
+    width: 25%;
+    text-align: left;
+    float: left;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+#browse {
+    width: 10%;
+    text-align: left;
+    float: left;
+    padding: 10px;
+    padding-right: 100px;
+    padding-left: 20px;
+}
+
+#email, #phone {
+    text-align: left;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    margin: 10px 0;
+}
+
+
+aside {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    text-align: left;
+    padding-left: 0px;
+}
+
+section {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+article {
+    width: 25%;
+    float: left;
+    padding: 10px;
+}
+
+button {
+    font-size: 20px;
+    background-color: skyblue;
+    color: #333;
+    border-radius: 15px;
+    cursor: pointer;
+    border: #333;
+    margin: 5px;
+    padding: 10px;
+    width: 50%;
+}
+
+button:hover {
+    background-color: deepskyblue;
+    font-weight: bold;
+}
+
+button.selected {
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}
+
+.placeholder {
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    border: 5px solid rgb(150, 160, 175);
+    margin: 10px;
+    background-color: rgb(150, 160, 175);
+}
+
+.tempimage {
+    width: 300px;
+    height: 280px;
+    padding: 10px;
+    border: 5px solid rgb(0, 0, 0);
+    margin: 10px;
+    float: left;
+    background-color: rgb(255, 255, 255);
+}
+
+#result-q1, #result-q2, #result-q3, #result-q4, #result-q5 {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+    aside, section, article {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #summary, #call-to-action, #browse, #contact {
+        width: 100%;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    footer {
+        padding-bottom: 850px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .tempimage, .navbar ul {
+        margin-left: 10px;
+    }
+
+    .tempimage {
+        margin-left: 15px;
+    }
+}

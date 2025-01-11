@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <h1 class="heading">PERSONALITY TEST</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <h1 class="heading">More Quizzes</h1>
+        <hr>
+        <ul>
+            <li class="hyperlink">Which U.S. President Are You?</li>
+            <li class="hyperlink">Which Slasher Icon Would Save You?</li>
+            <li class="hyperlink">Which Mythical Creature Are You?</li>
+            <li class="hyperlink">What Decade Do You Belong In?</li>
+            <li class="hyperlink">Which TV Show Do You Belong In?</li>
+        </ul>
+        <hr>
+    </aside>
+
+    <section>
+        <h1 class="heading">QUIZ</h1>
+        <hr>
+
+        <div class="question" id="q1">
+            <h2 class="heading">1. How do you typically handle stress?</h2>
+            <div class="tempimage"></div>
+            <button data-answer="a" onclick="recordAnswer('q1', this)">Take charge and find solutions</button>
+            <button data-answer="b" onclick="recordAnswer('q1', this)">Socialize to distract yourself</button>
+            <button data-answer="c" onclick="recordAnswer('q1', this)">Reflect deeply and analyze the situation</button>
+            <button data-answer="d" onclick="recordAnswer('q1', this)">Stay calm and go with the flow</button>
+            <p id="result-q1">-multiple choice-</p>
+            <br>
+            <hr>
+        </div>
+
+        <div class="question" id="q2">
+            <h2 class="heading">2. When working in a group, you prefer to:</h2>
+            <div class="tempimage"></div>
+            <button data-answer="a" onclick="recordAnswer('q2', this)">Lead and make decisions</button>
+            <button data-answer="b" onclick="recordAnswer('q2', this)">Engage and motivate others</button>
+            <button data-answer="c" onclick="recordAnswer('q2', this)">Plan and organize everything carefully</button>
+            <button data-answer="d" onclick="recordAnswer('q2', this)">Support and harmonize with the team</button>
+            <p id="result-q2">-multiple choice-</p>
+            <br>
+            <hr>
+        </div>
+
+        <div class="question" id="q3">
+            <h2 class="heading">3. How do you usually spend your free time?</h2>
+            <div class="tempimage"></div>
+            <button data-answer="a" onclick="recordAnswer('q3', this)">Pursuing ambitious goals</button>
+            <button data-answer="b" onclick="recordAnswer('q3', this)">Hanging out with friends and having fun</button>
+            <button data-answer="c" onclick="recordAnswer('q3', this)">Reading or engaging in creative activities</button>
+            <button data-answer="d" onclick="recordAnswer('q3', this)">Enjoying peaceful activities</button>
+            <p id="result-q3">-multiple choice-</p>
+            <br>
+            <hr>
+        </div>
+
+        <div class="question" id="q4">
+            <h2 class="heading">4. How do you react to sudden changes?</h2>
+            <div class="tempimage"></div>
+            <button data-answer="a" onclick="recordAnswer('q4', this)">Adapt quickly and take control</button>
+            <button data-answer="b" onclick="recordAnswer('q4', this)">Embrace the change with excitement</button>
+            <button data-answer="c" onclick="recordAnswer('q4', this)">Feel anxious and need time to adjust</button>
+            <button data-answer="d" onclick="recordAnswer('q4', this)">Accept and remain composed</button>
+            <p id="result-q4">-multiple choice-</p>
+            <br>
+            <hr>
+        </div>
+
+        <div class="question" id="q5">
+            <h2 class="heading">5. What describes your communication style?</h2>
+            <div class="tempimage"></div>
+            <button data-answer="a" onclick="recordAnswer('q5', this)">Direct and assertive</button>
+            <button data-answer="b" onclick="recordAnswer('q5', this)">Enthusiastic and talkative</button>
+            <button data-answer="c" onclick="recordAnswer('q5', this)">Thoughtful and detailed</button>
+            <button data-answer="d" onclick="recordAnswer('q5', this)">Calm and easy-going</button>
+            <p id="result-q5">-multiple choice-</p>
+            <br>
+            <br>
+            <hr>
+        </div>
+    </section>
+
+    <article>
+        <h1 class="heading">Advertisements</h1>
+        <hr>
+
+        <div class="placeholder">
+            <p>-ad goes here-</p>
+        </div>
+
+        <div class="placeholder">
+            <p>-ad goes here-</p>
+        </div>
+
+        <div class="placeholder">
+            <p>-ad goes here-</p>
+        </div>
+    </article>
+
+    <footer>
+        <div id="summary">
+            <h3>Company Name</h3>
+            <div class="logo"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus maiores est, facilis exercitationem voluptatem, qui nihil earum quis illum consequatur consectetur eaque nam libero unde vero molestiae vitae voluptatibus. Expedita.</p>
+        </div>
+
+        <div id="browse">
+            <h3>Browse</h3>
+            <nav>
+                <p><a href="index.html" class="doormat">Home</a></p>
+                <p><a href="about.html" class="doormat">About</a></p>
+                <p><a href="donate.html" class="doormat">Donate</a></p>
+                <p><a href="contact.html" class="doormat">Contact</a></p>
+            </nav>
+        </div>
+
+        <div id="call-to-action">
+            <h3>Want More?</h3>
+            <p><a href="quizzes.html" class="doormat">Explore More Quizzes</a></p>
+        </div>
+        
+        <div id="contact">
+            <h3>Contact</h3>
+            <div id="email">
+                <img src="images/email.png">
+                <p>jaydenclark178@gmail.com</p>
+            </div>
+
+            <div id="phone">
+                <img src="images/phone.png">
+                <p>231-497-9222 (call or text)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="myScript.js"></script>
+</body>
+</html>
