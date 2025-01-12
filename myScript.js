@@ -15,3 +15,33 @@ function recordAnswer(questionId, buttonElement) {
     // Add "selected" class to the clicked button
     buttonElement.classList.add('selected');
 }
+
+function initializeAsideState() {
+    const asideSection = document.getElementById('aside-section');
+    if (window.innerWidth <= 600) {
+        asideSection.classList.add('collapsed');
+    } else {
+        asideSection.classList.remove('collapsed');
+    }
+}
+
+// Initialize state on page load
+initializeAsideState();
+
+// Re-check on window resize (optional, to handle dynamic resizing)
+window.addEventListener('resize', initializeAsideState);
+
+document.getElementById('aside-toggle').addEventListener('click', function () {
+    const asideSection = document.getElementById('aside-section');
+    const toggleIcon = document.getElementById('aside-toggle-icon');
+
+    // Toggle the "collapsed" class
+    asideSection.classList.toggle('collapsed');
+
+    // Switch the icon image based on the state
+    if (asideSection.classList.contains('collapsed')) {
+        toggleIcon.src = '/images/menu.png'; // Collapsed icon
+    } else {
+        toggleIcon.src = '/images/menu_open.png'; // Expanded icon
+    }
+});

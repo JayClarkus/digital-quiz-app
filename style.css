@@ -74,6 +74,33 @@ header {
     background-color: #000000;
 }
 
+#aside-content {
+    display: block;
+}
+
+#aside-section.collapsed #aside-content {
+    display: none;
+}
+
+.aside-toggle-button {
+    display: none;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 10px;
+    width: 15%;
+}
+
+.aside-toggle-button:hover{
+    background-color: #555;
+}
+
+.aside-toggle-button img {
+    width: 30px;
+    height: 30px;
+}
+
 .doormat {
     color: rgb(232, 234, 237);
     text-decoration: none;
@@ -150,7 +177,6 @@ footer {
     column-gap: 10px;
     margin: 10px 0;
 }
-
 
 aside {
     width: 25%;
@@ -245,6 +271,18 @@ button.selected {
 
     .navbar ul {
         margin-left: 10px;
+    }
+
+    .aside-toggle-button {
+        display: block;
+    }
+
+    #aside-section #aside-content {
+        display: none;
+    }
+
+    #aside-section:not(.collapsed) #aside-content {
+        display: block;
     }
 
     .tempimage {
