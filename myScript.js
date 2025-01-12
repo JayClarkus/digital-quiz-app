@@ -45,3 +45,5 @@ document.getElementById('aside-toggle').addEventListener('click', function () {
         toggleIcon.src = '/images/menu_open.png'; // Expanded icon
     }
 });
+
+alert("Website is still in development, some features may not function yet.");

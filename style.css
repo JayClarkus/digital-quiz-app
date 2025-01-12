@@ -120,6 +120,7 @@ header {
     color: deepskyblue;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: line-through;
 }
 
 footer {
