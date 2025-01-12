@@ -1,23 +1,34 @@
+const userAnswers = {};
+
 function recordAnswer(questionId, buttonElement) {
-    const selectedAnswer = buttonElement.getAttribute('data-answer'); // Get the answer (a, b, c, or d)
+    const selectedAnswer = buttonElement.getAttribute('data-answer');
     const resultElement = document.getElementById(`result-${questionId}`);
 
-    // Display the selected answer in the result element
+    userAnswers[questionId] = selectedAnswer;
+
     resultElement.textContent = selectedAnswer.toUpperCase();
 
-    // Remove "selected" class from all buttons in the same question
     const questionDiv = document.getElementById(questionId);
     const buttons = questionDiv.getElementsByTagName('button');
     for (let button of buttons) {
         button.classList.remove('selected');
     }
 
-    // Add "selected" class to the clicked button
     buttonElement.classList.add('selected');
+
+    updateSubmitMessage();
+}
+
+function updateSubmitMessage() {
+    const answeredCount = Object.keys(userAnswers).length;
+    const submitMessageElement = document.querySelector('.submit');
+
+    submitMessageElement.textContent = `${answeredCount}/10 questions answered`;
 }
 
 function initializeAsideState() {
     const asideSection = document.getElementById('aside-section');
+
     if (window.innerWidth <= 600) {
         asideSection.classList.add('collapsed');
     } else {
@@ -25,25 +36,49 @@ function initializeAsideState() {
     }
 }
 
-// Initialize state on page load
-initializeAsideState();
+function submitAnswers() {
+    const totalQuestions = 10;
+    const answeredCount = Object.keys(userAnswers).length;
 
-// Re-check on window resize (optional, to handle dynamic resizing)
-window.addEventListener('resize', initializeAsideState);
+    if (answeredCount < totalQuestions) {
+        alert(`You have only answered ${answeredCount}/${totalQuestions} questions. Please answer all questions before submitting.`);
+        return;
+    }
 
-document.getElementById('aside-toggle').addEventListener('click', function () {
+    const answerCount = {
+        a: 0,
+        b: 0,
+        c: 0,
+        d: 0
+    };
+
+    for (const questionId in userAnswers) {
+        const answer = userAnswers[questionId];
+        if (answer && answerCount[answer] !== undefined) {
+            answerCount[answer]++;
+        }
+    }
+
+    alert(`Results:\nA: ${answerCount.a}\nB: ${answerCount.b}\nC: ${answerCount.c}\nD: ${answerCount.d}`);
+}
+
+function toggleAside() {
     const asideSection = document.getElementById('aside-section');
     const toggleIcon = document.getElementById('aside-toggle-icon');
 
-    // Toggle the "collapsed" class
     asideSection.classList.toggle('collapsed');
 
-    // Switch the icon image based on the state
     if (asideSection.classList.contains('collapsed')) {
-        toggleIcon.src = '/images/menu.png'; // Collapsed icon
+        toggleIcon.src = '/images/menu.png';
     } else {
-        toggleIcon.src = '/images/menu_open.png'; // Expanded icon
+        toggleIcon.src = '/images/menu_open.png';
     }
-});
+}
+
+document.getElementById('aside-toggle').addEventListener('click', toggleAside);
+
+initializeAsideState();
+
+window.addEventListener('resize', initializeAsideState);
 
 alert("Website is still in development, some features may not function yet.");
