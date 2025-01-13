@@ -298,4 +298,8 @@ button.selected {
     .tempimage {
         margin-left: 5%;
     }
+
+    .about {
+        text-align: center;
+    }
 }
