@@ -364,24 +364,18 @@ button.selected {
         width: 90%;
     }
 
-    #contact-section {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 5px;
-    }
-
-    #contact-section .contact-right {
+    .contact-right {
         display: block;
     }
 
-    #contact-section .contact-right img {
+    .contact-right img {
         max-width: 90%;
         height: auto;
     }
 
-    #contact-section .contact-left textarea,
-    #contact-section .contact-left input[type="text"],
-    #contact-section .contact-left input[type="email"] {
+    .contact-left textarea,
+    .contact-left input[type="text"],
+    .contact-left input[type="email"] {
         width: calc(100% - 25px);
         margin-left: 5px;
     }
