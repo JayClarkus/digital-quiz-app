@@ -320,6 +320,9 @@ button.selected {
     .banner {
         width: 100%;
         margin-left: 0;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
     
     footer {
@@ -356,12 +359,30 @@ button.selected {
         margin-left: 0px;
     }
 
-    .contact-input {
-        width: 80vw;
+    .contact-form {
+        margin: 0 auto;
+        width: 90%;
     }
 
-    .contact-right {
-        display: none;
+    #contact-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #contact-section .contact-right {
+        display: block;
+    }
+
+    #contact-section .contact-right img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    #contact-section .contact-left textarea,
+    #contact-section .contact-left input[type="text"],
+    #contact-section .contact-left input[type="email"] {
+        width: 80vw;
     }
 }
 
@@ -410,37 +431,4 @@ button.selected {
     height: 200px;
     padding-top: 15px;
     border-radius: 20px;
-}
-
-@media screen and (max-width: 600px) {
-    #contact-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    #contact-heading {
-        width: 80%;
-    }
-
-    #contact-left {
-        margin-left: 10px;
-    }
-
-    #contact-section .contact-right {
-        display: block;
-    }
-
-    #contact-section .contact-right img {
-        max-width: 90%;
-        height: auto;
-    }
-
-    #contact-section .contact-left textarea,
-    #contact-section .contact-left input[type="text"],
-    #contact-section .contact-left input[type="email"] {
-        width: 80vw;
-    }
 }
