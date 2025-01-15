@@ -132,6 +132,10 @@ footer {
     width: 100%;
 }
 
+#copyright {
+    width: 100%;
+}
+
 #summary {
     width: 35%;
     text-align: left;
@@ -412,6 +416,8 @@ button.selected {
         flex-direction: column;
         align-items: center;
         padding: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     #contact-heading {
