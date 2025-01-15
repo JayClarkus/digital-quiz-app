@@ -180,6 +180,7 @@ footer {
 
 .contact-left-title hr {
     width: 400px;
+    max-width: 80%;
 }
 
 .contact-input {
@@ -373,6 +374,7 @@ button.selected {
     gap: 40px;
     width: 100%;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 #contact-section .contact-form {
