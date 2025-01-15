@@ -366,7 +366,7 @@ button.selected {
 
     #contact-section {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         padding: 5px;
     }
 
@@ -382,7 +382,13 @@ button.selected {
     #contact-section .contact-left textarea,
     #contact-section .contact-left input[type="text"],
     #contact-section .contact-left input[type="email"] {
-        width: 80vw;
+        width: calc(100% - 25px);
+        margin-left: 5px;
+    }
+
+    #contact-section .contact-form {
+        width: 100%;
+        padding-left: 0px;
     }
 }
 
