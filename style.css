@@ -400,7 +400,6 @@ button.selected {
 #contact-section .contact-form {
     flex: 1;
     max-width: 500px;
-    margin-left: 10%;
 }
 
 #contact-section .contact-right {
