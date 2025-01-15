@@ -414,6 +414,10 @@ button.selected {
         padding: 10px;
     }
 
+    #contact-left {
+        margin-left: 10px;
+    }
+
     #contact-section .contact-right {
         display: block;
     }
