@@ -360,13 +360,25 @@ button.selected {
         margin-left: 0px;
     }
 
+    .contact-form {
+        margin: 0 auto;
+        width: 90%;
+        gap: 10px;
+    }
+
     .contact-right {
         display: block;
     }
 
+    .contact-left textarea {
+        height: 120px;
+        padding: 10px;
+    }
+
     .contact-right img {
-        max-width: 90%;
+        max-width: 80%;
         height: auto;
+        margin-top: 20px;
     }
 
     #content-button {
@@ -376,14 +388,16 @@ button.selected {
     .contact-left textarea,
     .contact-left input[type="text"],
     .contact-left input[type="email"] {
-        width: calc(100% - 40px);
-        margin-left: 10px;
-        margin-right: 30px;
+        width: calc(100% - 20px);
+        height: 40px;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 10px;
     }
 
-    #contact-section .contact-form {
-        width: 90%;
-        padding-left: 0px;
+    #contact-section {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
