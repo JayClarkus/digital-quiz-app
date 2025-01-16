@@ -361,7 +361,8 @@ button.selected {
 
     .contact-form {
         margin: 0 auto;
-        width: 90%;
+        width: 80%;
+        padding-right: 25px;
     }
 
     .contact-right {
