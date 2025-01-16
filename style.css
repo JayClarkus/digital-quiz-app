@@ -362,7 +362,7 @@ button.selected {
     .contact-form {
         margin: 0 auto;
         width: 80%;
-        padding-right: 25px;
+        margin-right: 25px;
     }
 
     .contact-right {
