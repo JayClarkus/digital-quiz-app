@@ -382,8 +382,8 @@ button.selected {
     .contact-left input[type="text"],
     .contact-left input[type="email"] {
         width: calc(100% - 40px);
-        margin-left: 10px;
-        margin-right: 30px;
+        padding-left: 5px;
+        padding-right: 35px;
     }
 
     #contact-section .contact-form {
