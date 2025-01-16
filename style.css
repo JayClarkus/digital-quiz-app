@@ -388,6 +388,8 @@ button.selected {
     #contact-section .contact-form {
         width: 100%;
         padding-left: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
