@@ -59,7 +59,27 @@ function submitAnswers() {
         }
     }
 
-    alert(`Results:\nA: ${answerCount.a}\nB: ${answerCount.b}\nC: ${answerCount.c}\nD: ${answerCount.d}`);
+    let maxScore = 0;
+    let topAnswers = [];
+
+    for (const [key, value] of Object.entries(answerCount)) {
+        if (value > maxScore) {
+            maxScore = value;
+            topAnswers = [key];
+        } else if (value === maxScore) {
+            topAnswers.push(key);
+        }
+    }
+
+    let finalAnswer;
+    if (topAnswers.length === 1) {
+        finalAnswer = topAnswers[0];
+    } else {
+        const randomIndex = Math.floor(Math.random() * topAnswers.length);
+        finalAnswer = topAnswers[randomIndex];
+    }
+
+    alert(`Results:\nA: ${answerCount.a}\nB: ${answerCount.b}\nC: ${answerCount.c}\nD: ${answerCount.d}\n\nHighest scoring answer: ${finalAnswer.toUpperCase()}`);
 }
 
 function toggleAside() {

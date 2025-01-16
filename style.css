@@ -374,6 +374,10 @@ button.selected {
         height: auto;
     }
 
+    #content-button {
+        margin-left: 25%;
+    }
+
     .contact-left textarea,
     .contact-left input[type="text"],
     .contact-left input[type="email"] {
