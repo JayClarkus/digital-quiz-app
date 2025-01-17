@@ -1,5 +1,6 @@
 
 
+
 * {
     box-sizing: border-box;
     font-family: Verdana, sans-serif;
@@ -206,6 +207,10 @@ footer {
 
 .contact-right img {
     width: 500px;
+}
+
+#content-button {
+    margin-left: 25%;
 }
 
 #browse {
