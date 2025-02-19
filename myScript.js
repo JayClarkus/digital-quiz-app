@@ -95,6 +95,12 @@ function toggleAside() {
     }
 }
 
+function openLink(link) {
+    if (link = 'personality') {
+        window.open("index.html", "_self");
+    }
+}
+
 document.getElementById('aside-toggle').addEventListener('click', toggleAside);
 
 initializeAsideState();
