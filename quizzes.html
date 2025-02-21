@@ -1,12 +1,10 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personality Test</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quizzesStyle.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
@@ -20,23 +18,30 @@
 
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="quizzes.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="donate.html">Donate</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>    
 
-    <section id="about-section">
+    <section>
         <h1>Quiz Explorer</h1>
         <hr>
-        <button onclick="openLink('personality')">Personality Test</button>
-        <button onclick="alert('Quiz is still in development, coming soon.')">Which U.S. President Are You?</button>
-        <button onclick="alert('Quiz is still in development, coming soon.')">What Kind of Learner Are You?</button>
-        <button onclick="alert('Quiz is still in development, coming soon.')">Which Season Best Represents You?</button>
-        <button onclick="alert('Quiz is still in development, coming soon.')">Which Element Are You Most Connected To?</button>
-        <button onclick="alert('Quiz is still in development, coming soon.')">Which Mythical Creature Are You?</button>
-    </section>
+        <div class="button-container">
+            <div class="left-buttons">
+                <button id="button-one" onclick="openLink('personality')"><img src="/images/logo.png" class="logo"> Personality Test</button>
+                <button id="button-two" onclick="alert('Quiz is still in development, coming soon.')"><img src="/images/logo(usa).png" class="logo"> Which U.S. President Are You?</button>
+                <button id="button-three" onclick="alert('Quiz is still in development, coming soon.')"><img src="/images/logo(learning).png" class="logo">What Kind of Learner Are You?</button>
+            </div>
+    
+            <div class="right-buttons">
+                <button id="button-four" onclick="alert('Quiz is still in development, coming soon.')"><img src="images/logo(seasons).png" class="logo">Which Season Best Represents You?</button>
+                <button id="button-five" onclick="alert('Quiz is still in development, coming soon.')"><img src="/images/logo(elements).png" class="logo">Which Element Are You Most Connected To?</button>
+                <button id="button-six" onclick="alert('Quiz is still in development, coming soon.')"><img src="/images/logo(creature).png" class="logo">Which Mythical Creature Are You?</button>
+            </div>
+        </div>
+    </section>    
 
     <footer>
         <div id="summary">

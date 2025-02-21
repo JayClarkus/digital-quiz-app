@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    background-color: rgb(242, 252, 255);
+}
+
+h1 {
+    font-size: 32px;
+}
+
+hr {
+    height: 5px;
+    background-color: rgb(39, 73, 98);
+}
+
+header {
+    color: white;
+    background-color: rgb(39, 73, 98);
+    padding: 25px;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    margin-right: 1rem;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 30%;
+}
+
+.navbar {
+    background-color: rgb(60, 65, 70);
+    height: 50px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    margin-left: 39%;
+}
+
+.navbar li {
+    float: left;
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #000000;
+}
+
+.doormat {
+    color: rgb(232, 234, 237);
+    text-decoration: none;
+}
+
+.doormat:hover {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    clear: both;
+    border-top: 4px solid black;
+    background-color: rgb(150, 160, 175);
+    padding-bottom: 330px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+}
+
+#summary, #call-to-action, #contact, #browse {
+    width: 25%;
+    text-align: left;
+    float: left;
+    padding: 10px;
+}
+
+#summary {
+    width: 35%;
+    padding-right: 80px;
+}
+
+#call-to-action {
+    width: 15%;
+}
+
+#browse {
+    width: 10%;
+    padding-right: 100px;
+}
+
+#email, #phone {
+    text-align: left;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    margin: 10px 0;
+}
+
+section {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    margin-left: 25%;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.left-buttons, .right-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    font-size: 20px;
+    background-color: skyblue;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    width: 325px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#button-one {
+    background-color: rgb(39, 73, 98);
+    padding-right: 50px;
+}
+
+#button-two {
+    background-color: rgb(0, 51, 158);
+}
+
+#button-three {
+    background-color: rgb(232, 131, 0);
+}
+
+#button-four {
+    background-color: rgb(12, 125, 60);
+}
+
+#button-five {
+    background-color: rgb(125, 12, 20);
+}
+
+#button-six {
+    background-color: rgb(124, 0, 138);
+}
+
+button:hover {
+    background-color: deepskyblue;
+    font-weight: bold;
+}
+
+button.selected {
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}
+
+button img {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    #summary, #call-to-action, #browse, #contact {
+        width: 100%;
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .banner {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer {
+        padding-bottom: 850px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar ul {
+        margin-left: 10px;
+    }
+
+    #about-section {
+        margin-left: 0px;
+    }
+
+    .button-container {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+}
