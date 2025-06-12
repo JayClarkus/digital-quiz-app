@@ -13,6 +13,11 @@ h1 {
     font-size: 32px;
 }
 
+#special-h {
+    font-size: 36px;
+    font-weight: bold;
+}
+
 .heading {
     text-align: center;
 }
