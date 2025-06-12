@@ -205,10 +205,6 @@ footer {
     border: 4px solid;
 }
 
-.contact-right img {
-    width: 500px;
-}
-
 #content-button {
     margin-left: 25%;
 }
@@ -381,18 +377,9 @@ button.selected {
         font-size: 1em;
     }
 
-    .contact-right {
-        display: block;
-    }
-
     .contact-left textarea {
         height: 120px;
         padding: 10px 5px;
-    }
-
-    .contact-right img {
-        max-width: 90%;
-        height: auto;
     }
 
     #content-button {
@@ -432,13 +419,13 @@ button.selected {
     max-width: 500px;
 }
 
-#contact-section .contact-right {
+#contact-section {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-#contact-section .contact-right img {
+#contact-section {
     max-width: 100%;
     height: auto;
 }
