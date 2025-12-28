@@ -1,10 +1,10 @@
 /* ========================================
-   Digital Quiz App - Main Stylesheet
+   Digital Quiz App - Quiz Explorer Stylesheet
    ========================================
    
    Modern, responsive CSS using:
    - CSS Custom Properties (variables)
-   - Flexbox layout (no floats)
+   - Flexbox & CSS Grid layout
    - Fluid typography with clamp()
    - Mobile-first responsive design
    - Proper accessibility features
@@ -37,14 +37,13 @@
     --font-size-lg: 1.25rem;
     --font-size-xl: 1.5rem;
     --font-size-2xl: 2rem;
+    --font-size-3xl: 2.25rem;
     
     --border-radius-sm: 0.5rem;
     --border-radius-md: 0.9375rem;
     --border-radius-lg: 1.25rem;
-    --border-radius-full: 3.125rem;
     
     --max-width-content: 75rem;
-    --max-width-section: 50rem;
 }
 
 /* ========================================
@@ -88,18 +87,15 @@ h3 {
     margin-bottom: var(--spacing-xs);
 }
 
-p {
-    margin-bottom: var(--spacing-sm);
-}
-
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-.heading {
-    text-align: center;
+#special-h {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    font-weight: bold;
 }
 
 hr {
@@ -114,7 +110,7 @@ hr {
    ======================================== */
 header {
     color: var(--color-white);
-    background-color: var(--color-primary);
+    background-color: var(--color-tertiary);
     padding: clamp(1rem, 3vw, 1.5625rem);
 }
 
@@ -171,88 +167,42 @@ header {
 }
 
 /* ========================================
-   Sidebar (Aside) Styles
-   ======================================== */
-#aside-content {
-    display: block;
-}
-
-#aside-section.collapsed #aside-content {
-    display: none;
-}
-
-.aside-toggle-button {
-    display: none;
-    background-color: var(--color-text);
-    border: none;
-    cursor: pointer;
-    padding: var(--spacing-xs);
-    margin-bottom: var(--spacing-sm);
-    width: 3rem;
-    height: 3rem;
-    border-radius: var(--border-radius-sm);
-    transition: background-color 0.3s ease;
-}
-
-.aside-toggle-button:hover,
-.aside-toggle-button:focus {
-    background-color: #555;
-    outline: 2px solid var(--color-accent);
-}
-
-.aside-toggle-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.hyperlink {
-    padding: var(--spacing-xs);
-    text-align: left;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    list-style: none;
-}
-
-.hyperlink:hover,
-.hyperlink:focus {
-    color: var(--color-accent);
-    font-weight: bold;
-    text-decoration: line-through;
-}
-
-/* ========================================
    Main Content Layout
    ======================================== */
 main {
     display: flex;
     flex: 1;
-    gap: 0;
     width: 100%;
-    max-width: var(--max-width-content);
     margin: 0 auto;
 }
 
-aside {
-    flex: 0 0 25%;
-    min-width: 15rem;
-    text-align: left;
-    padding: var(--spacing-md) var(--spacing-sm);
-}
-
-aside ul {
-    list-style: none;
-    padding-left: var(--spacing-sm);
-}
-
 section {
-    flex: 0 0 50%;
-    padding: var(--spacing-md) var(--spacing-sm);
+    flex: 1;
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+    width: 100%;
 }
 
-article {
-    flex: 0 0 25%;
-    padding: var(--spacing-md) var(--spacing-sm);
+/* ========================================
+   Quiz Button Container
+   ======================================== */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    gap: var(--spacing-lg);
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 60rem;
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.left-buttons, .right-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
 }
 
 /* ========================================
@@ -261,25 +211,28 @@ article {
 button {
     font-size: clamp(0.875rem, 2vw, 1.25rem);
     background-color: var(--color-skyblue);
-    color: var(--color-text);
+    color: var(--color-white);
     border-radius: var(--border-radius-md);
     cursor: pointer;
-    border: 2px solid var(--color-text);
-    margin: var(--spacing-xs);
-    padding: var(--spacing-sm);
-    min-width: 10rem;
-    max-width: 100%;
-    width: clamp(15rem, 50%, 30rem);
+    border: none;
+    padding: var(--spacing-md);
+    width: 100%;
+    min-height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
     transition: all 0.3s ease;
-    font-weight: 500;
+    font-weight: 600;
+    text-align: center;
 }
 
 button:hover,
 button:focus {
     background-color: var(--color-accent);
     font-weight: bold;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     outline: 2px solid var(--color-accent);
 }
 
@@ -291,159 +244,38 @@ button.selected {
     background-color: var(--color-darkblue);
     color: var(--color-white);
     font-weight: bold;
-    border-color: var(--color-darkblue);
 }
 
-/* ========================================
-   Placeholders and Images
-   ======================================== */
-.placeholder {
-    text-align: center;
-    width: 100%;
-    max-width: 18.75rem;
-    height: auto;
-    aspect-ratio: 6 / 5;
-    padding: var(--spacing-sm);
-    border: 0.3125rem solid var(--color-tertiary);
-    margin: var(--spacing-sm) auto;
-    background-color: var(--color-tertiary);
-    border-radius: var(--border-radius-sm);
+button img {
+    width: clamp(2rem, 5vw, 3rem);
+    height: clamp(2rem, 5vw, 3rem);
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-.tempimage {
-    width: 100%;
-    max-width: 18.75rem;
-    height: auto;
-    aspect-ratio: 1;
-    padding: var(--spacing-sm);
-    border: 0.3125rem solid var(--color-black);
-    margin: var(--spacing-sm) auto;
-    background-color: var(--color-white);
-    border-radius: var(--border-radius-sm);
+/* Individual Button Colors */
+#button-one {
+    background-color: var(--color-primary);
 }
 
-/* ========================================
-   Quiz Result Styles
-   ======================================== */
-.question {
-    margin-bottom: var(--spacing-xl);
+#button-two {
+    background-color: rgb(0, 51, 158);
 }
 
-#result-q1, #result-q2, #result-q3, #result-q4, #result-q5, 
-#result-q6, #result-q7, #result-q8, #result-q9, #result-q10 {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    margin: var(--spacing-md) 0;
-    font-weight: 500;
+#button-three {
+    background-color: rgb(232, 131, 0);
 }
 
-.submit {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    font-weight: 500;
-    margin: var(--spacing-md) 0;
+#button-four {
+    background-color: rgb(12, 125, 60);
 }
 
-/* ========================================
-   About Section
-   ======================================== */
-.about {
-    text-align: left;
-    line-height: 1.8;
+#button-five {
+    background-color: rgb(125, 12, 20);
 }
 
-#about-section {
-    max-width: var(--max-width-section);
-    margin: 0 auto;
-    padding: var(--spacing-lg);
-}
-
-/* ========================================
-   Contact Form
-   ======================================== */
-#contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--spacing-lg);
-    gap: var(--spacing-xl);
-    width: 100%;
-    max-width: var(--max-width-section);
-    margin: 0 auto;
-}
-
-.contact-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.contact-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-md);
-    width: 100%;
-    max-width: 31.25rem;
-}
-
-.contact-left-title {
-    width: 100%;
-}
-
-.contact-left-title hr {
-    width: 100%;
-    max-width: 25rem;
-    margin: 0 auto;
-}
-
-.contact-input {
-    width: 100%;
-    max-width: 25rem;
-    min-height: 3.125rem;
-    border: 2px solid #ccc;
-    outline: none;
-    padding: 0 var(--spacing-md);
-    font-weight: 500;
-    border-radius: var(--border-radius-full);
-    font-size: var(--font-size-base);
-    transition: border 0.3s ease;
-}
-
-.contact-left textarea {
-    min-height: 8.75rem;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--border-radius-lg);
-    resize: vertical;
-}
-
-.contact-input:focus {
-    border: 3px solid var(--color-primary);
-    outline: 2px solid var(--color-accent);
-}
-
-#content-button {
-    align-self: center;
-    margin-left: 0;
-}
-
-/* ========================================
-   Donate Section
-   ======================================== */
-.donate {
-    margin: var(--spacing-xl) auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.donate img,
-.donate input[type="image"] {
-    margin: 0 auto;
-    display: block;
+#button-six {
+    background-color: rgb(124, 0, 138);
 }
 
 /* ========================================
@@ -462,32 +294,28 @@ footer {
     margin-top: auto;
 }
 
-#summary {
-    flex: 2 1 15.625rem;
-    min-width: 15.625rem;
+#summary, #call-to-action, #contact, #browse {
+    min-width: 10rem;
     text-align: left;
     padding: var(--spacing-sm);
 }
 
-#browse {
-    flex: 1 1 10rem;
-    min-width: 10rem;
-    text-align: left;
-    padding: var(--spacing-sm);
+#summary {
+    flex: 2 1 15.625rem;
+    min-width: 15.625rem;
 }
 
 #call-to-action {
     flex: 1 1 10rem;
-    min-width: 10rem;
-    text-align: left;
-    padding: var(--spacing-sm);
+}
+
+#browse {
+    flex: 1 1 10rem;
 }
 
 #contact {
     flex: 1.5 1 12.5rem;
     min-width: 12.5rem;
-    text-align: left;
-    padding: var(--spacing-sm);
 }
 
 #email, #phone {
@@ -525,24 +353,13 @@ footer {
 
 /* Tablet View (768px - 1024px) */
 @media screen and (max-width: 64rem) {
-    main {
-        flex-direction: column;
-    }
-    
-    aside,
-    section,
-    article {
-        flex: 1 1 100%;
-        width: 100%;
-        max-width: 100%;
+    .button-container {
+        grid-template-columns: 1fr;
+        max-width: 30rem;
     }
     
     .banner {
         justify-content: center;
-    }
-    
-    .tempimage {
-        margin: var(--spacing-sm) auto;
     }
 }
 
@@ -557,17 +374,10 @@ footer {
         flex-direction: column;
     }
 
-    aside,
-    section,
-    article {
-        flex: 1 1 100%;
+    section {
         width: 100%;
-        text-align: center;
-        padding: var(--spacing-sm);
-    }
-    
-    aside {
-        text-align: left;
+        max-width: 100%;
+        padding: var(--spacing-md) var(--spacing-sm);
     }
     
     #summary, #call-to-action, #browse, #contact {
@@ -585,7 +395,7 @@ footer {
         text-align: center;
         padding: var(--spacing-sm);
     }
-    
+
     footer {
         flex-direction: column;
         padding: var(--spacing-lg) var(--spacing-sm);
@@ -602,77 +412,17 @@ footer {
         font-size: 0.875rem;
     }
 
-    .aside-toggle-button {
-        display: block;
-        margin: 0 auto var(--spacing-sm);
-    }
-
-    #aside-section #aside-content {
-        display: none;
-    }
-
-    #aside-section:not(.collapsed) #aside-content {
-        display: block;
-    }
-
-    .tempimage {
-        margin: var(--spacing-sm) auto;
+    .button-container {
+        grid-template-columns: 1fr;
+        width: 100%;
         max-width: 100%;
-    }
-
-    .about {
-        text-align: left;
-    }
-
-    #about-section {
-        padding: var(--spacing-md);
-    }
-
-    .donate {
-        margin: var(--spacing-lg) auto;
-        padding: 0;
-    }
-
-    #contact-section {
-        padding: var(--spacing-md) var(--spacing-sm);
         gap: var(--spacing-md);
-    }
-
-    .contact-form {
-        margin: 0 auto;
-        width: 100%;
+        padding: 0 var(--spacing-sm);
     }
     
-    .contact-left {
-        width: 100%;
-        align-items: stretch;
-    }
-
-    .contact-left textarea {
-        min-height: 7.5rem;
-        padding: var(--spacing-sm);
-    }
-
-    #content-button {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .contact-input {
-        width: 100%;
-        max-width: 100%;
-        padding: var(--spacing-sm);
-        font-size: 1rem;
-    }
-
     button {
+        min-height: 6rem;
         width: 100%;
-        max-width: 100%;
-        margin: var(--spacing-xs) 0;
-    }
-    
-    .placeholder {
-        max-width: 100%;
     }
 }
 
@@ -699,14 +449,23 @@ footer {
     #email p, #phone p {
         font-size: 0.875rem;
     }
+    
+    button {
+        min-height: 5rem;
+        font-size: 0.875rem;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    button img {
+        width: 2rem;
+        height: 2rem;
+    }
 }
 
 /* High Resolution Displays */
 @media screen and (min-width: 90rem) {
-    main {
-        max-width: 90rem;
-    }
-    
+    main,
     .banner {
         max-width: 90rem;
     }
@@ -715,7 +474,6 @@ footer {
 /* Print Styles */
 @media print {
     .navbar,
-    .aside-toggle-button,
     button,
     footer {
         display: none;

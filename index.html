@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personality Test</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 
     <header>
         <div class="banner">
-            <img src="/images/logo.png" class="logo">
+            <img src="images/logo.png" class="logo">
             <h1 class="heading">PERSONALITY TEST</h1>
         </div>
     </header>
@@ -25,176 +25,178 @@
         </ul>
     </nav>
 
-    <aside id="aside-section">
-        <button id="aside-toggle" class="aside-toggle-button">
-            <img id="aside-toggle-icon" src="/images/menu.png" alt="Menu Toggle">
-        </button>
-        <div id="aside-content">
-            <h1 class="heading">More Quizzes</h1>
+    <main>
+        <aside id="aside-section">
+            <button id="aside-toggle" class="aside-toggle-button">
+            <img id="aside-toggle-icon" src="images/menu.png" alt="Menu Toggle">
+            </button>
+            <div id="aside-content">
+                <h1 class="heading">More Quizzes</h1>
+                <hr>
+                <br>
+                <ul>
+                    <li class="hyperlink">Which U.S. President Are You?  (coming soon)</li>
+                    <li class="hyperlink">What Kind of Learner Are You? (coming soon)</li>
+                    <li class="hyperlink">Which Season Best Represents You? (coming soon)</li>
+                    <li class="hyperlink">Which Element Are You Most Connected To? (coming soon)</li>
+                    <li class="hyperlink">Which Mythical Creature Are You? (coming soon)</li>
+                </ul>
+            </div>
+        </aside>      
+
+        <section>
+            <h1 class="heading">Quiz</h1>
             <hr>
             <br>
-            <ul>
-                <li class="hyperlink">Which U.S. President Are You?  (coming soon)</li>
-                <li class="hyperlink">What Kind of Learner Are You? (coming soon)</li>
-                <li class="hyperlink">Which Season Best Represents You? (coming soon)</li>
-                <li class="hyperlink">Which Element Are You Most Connected To? (coming soon)</li>
-                <li class="hyperlink">Which Mythical Creature Are You? (coming soon)</li>
-            </ul>
-        </div>
-    </aside>      
+            <div class="question" id="q1">
+                <h2 class="heading">1. When working in a group, you prefer to:</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q1', this)">Lead and make decisions</button>
+                <button data-answer="b" onclick="recordAnswer('q1', this)">Engage and motivate others</button>
+                <button data-answer="c" onclick="recordAnswer('q1', this)">Plan and organize everything carefully</button>
+                <button data-answer="d" onclick="recordAnswer('q1', this)">Support and harmonize with the team</button>
+                <p id="result-q1">-multiple choice-</p>
+                <br>
+                <hr>
+            </div>
 
-    <section>
-        <h1 class="heading">Quiz</h1>
-        <hr>
-        <br>
-        <div class="question" id="q1">
-            <h2 class="heading">1. When working in a group, you prefer to:</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q1', this)">Lead and make decisions</button>
-            <button data-answer="b" onclick="recordAnswer('q1', this)">Engage and motivate others</button>
-            <button data-answer="c" onclick="recordAnswer('q1', this)">Plan and organize everything carefully</button>
-            <button data-answer="d" onclick="recordAnswer('q1', this)">Support and harmonize with the team</button>
-            <p id="result-q1">-multiple choice-</p>
-            <br>
+            <div class="question" id="q2">
+                <h2 class="heading">2. How do you typically handle stress?</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q2', this)">Take charge and find solutions</button>
+                <button data-answer="b" onclick="recordAnswer('q2', this)">Socialize to distract yourself</button>
+                <button data-answer="c" onclick="recordAnswer('q2', this)">Reflect deeply and analyze the situation</button>
+                <button data-answer="d" onclick="recordAnswer('q2', this)">Stay calm and go with the flow</button>
+                <p id="result-q2">-multiple choice-</p>
+                <br>
+                <hr>
+            </div>
+
+            <div class="question" id="q3">
+                <h2 class="heading">3. How do you usually spend your free time?</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q3', this)">Pursuing ambitious goals</button>
+                <button data-answer="b" onclick="recordAnswer('q3', this)">Hanging out with friends and having fun</button>
+                <button data-answer="c" onclick="recordAnswer('q3', this)">Reading or engaging in creative activities</button>
+                <button data-answer="d" onclick="recordAnswer('q3', this)">Enjoying peaceful activities</button>
+                <p id="result-q3">-multiple choice-</p>
+                <br>
+                <hr>
+            </div>
+
+            <div class="question" id="q4">
+                <h2 class="heading">4. How do you react to sudden changes?</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q4', this)">Adapt quickly and take control</button>
+                <button data-answer="b" onclick="recordAnswer('q4', this)">Embrace the change with excitement</button>
+                <button data-answer="c" onclick="recordAnswer('q4', this)">Feel anxious and need time to adjust</button>
+                <button data-answer="d" onclick="recordAnswer('q4', this)">Accept and remain composed</button>
+                <p id="result-q4">-multiple choice-</p>
+                <br>
+                <hr>
+            </div>
+
+            <div class="question" id="q5">
+                <h2 class="heading">5. What describes your communication style?</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q5', this)">Direct and assertive</button>
+                <button data-answer="b" onclick="recordAnswer('q5', this)">Enthusiastic and talkative</button>
+                <button data-answer="c" onclick="recordAnswer('q5', this)">Thoughtful and detailed</button>
+                <button data-answer="d" onclick="recordAnswer('q5', this)">Calm and easy-going</button>
+                <p id="result-q5">-multiple choice-</p>
+                <br>
+                <br>
+                <hr>
+            </div>
+
+            <div class="question" id="q6">
+                <h2 class="heading">6. When faced with a problem, you:</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q6', this)">Take initiative and solve it</button>
+                <button data-answer="b" onclick="recordAnswer('q6', this)">Seek advice and share ideas</button>
+                <button data-answer="c" onclick="recordAnswer('q6', this)">Analyze every aspect before deciding</button>
+                <button data-answer="d" onclick="recordAnswer('q6', this)">Procrastinate until last minute</button>
+                <p id="result-q6">-multiple choice-</p>
+                <br>
+                <hr>
+            </div>
+
+            <div class="question" id="q7">
+                <h2 class="heading">7. Your ideal vacation would be:</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q7', this)">A challenging adventure</button>
+                <button data-answer="b" onclick="recordAnswer('q7', this)">A lively and social getaway</button>
+                <button data-answer="c" onclick="recordAnswer('q7', this)">A culturally enriching trip</button>
+                <button data-answer="d" onclick="recordAnswer('q7', this)">A relaxing and serene retreat</button>
+                <p id="result-q7">-multiple choice-</p>
+                <br>
+                <hr>
+            </div>
+
+            <div class="question" id="q8">
+                <h2 class="heading">8. How do you handle criticism?</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q8', this)">Defend your position strongly</button>
+                <button data-answer="b" onclick="recordAnswer('q8', this)">Laugh it off and move on</button>
+                <button data-answer="c" onclick="recordAnswer('q8', this)">Take it to heart and reflect</button>
+                <button data-answer="d" onclick="recordAnswer('q8', this)">Brush it off or consider it</button>
+                <p id="result-q8">-multiple choice-</p>
+                <br>
+                <hr>
+            </div>
+
+            <div class="question" id="q9">
+                <h2 class="heading">9. What motivates you the most?</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q9', this)">Achieving recognition</button>
+                <button data-answer="b" onclick="recordAnswer('q9', this)">Your Friends/Family</button>
+                <button data-answer="c" onclick="recordAnswer('q9', this)">The process itself</button>
+                <button data-answer="d" onclick="recordAnswer('q9', this)">Maintaining peace or stability</button>
+                <p id="result-q9">-multiple choice-</p>
+                <br>
+                <hr>
+            </div>
+
+            <div class="question" id="q10">
+                <h2 class="heading">10. How do you approach new tasks or projects?</h2>
+                <div class="tempimage"></div>
+                <button data-answer="a" onclick="recordAnswer('q10', this)">With determination</button>
+                <button data-answer="b" onclick="recordAnswer('q10', this)">With enthusiasm</button>
+                <button data-answer="c" onclick="recordAnswer('q10', this)">With careful planning</button>
+                <button data-answer="d" onclick="recordAnswer('q10', this)">With a steady hand</button>
+                <p id="result-q10">-multiple choice-</p>
+                <br>
+                <hr>
+            </div>
+
+            <div>
+                <p class="submit">0/10 questions answered</p>
+                <button onclick="submitAnswers()">Submit Answers</button>
+            </div>
+        </section>
+
+        <article>
+            <h1 class="heading">Advertisements</h1>
             <hr>
-        </div>
 
-        <div class="question" id="q2">
-            <h2 class="heading">2. How do you typically handle stress?</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q2', this)">Take charge and find solutions</button>
-            <button data-answer="b" onclick="recordAnswer('q2', this)">Socialize to distract yourself</button>
-            <button data-answer="c" onclick="recordAnswer('q2', this)">Reflect deeply and analyze the situation</button>
-            <button data-answer="d" onclick="recordAnswer('q2', this)">Stay calm and go with the flow</button>
-            <p id="result-q2">-multiple choice-</p>
-            <br>
-            <hr>
-        </div>
+            <div class="placeholder">
+                <p>-ad goes here-</p>
+            </div>
 
-        <div class="question" id="q3">
-            <h2 class="heading">3. How do you usually spend your free time?</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q3', this)">Pursuing ambitious goals</button>
-            <button data-answer="b" onclick="recordAnswer('q3', this)">Hanging out with friends and having fun</button>
-            <button data-answer="c" onclick="recordAnswer('q3', this)">Reading or engaging in creative activities</button>
-            <button data-answer="d" onclick="recordAnswer('q3', this)">Enjoying peaceful activities</button>
-            <p id="result-q3">-multiple choice-</p>
-            <br>
-            <hr>
-        </div>
+            <div class="placeholder">
+                <p>-ad goes here-</p>
+            </div>
 
-        <div class="question" id="q4">
-            <h2 class="heading">4. How do you react to sudden changes?</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q4', this)">Adapt quickly and take control</button>
-            <button data-answer="b" onclick="recordAnswer('q4', this)">Embrace the change with excitement</button>
-            <button data-answer="c" onclick="recordAnswer('q4', this)">Feel anxious and need time to adjust</button>
-            <button data-answer="d" onclick="recordAnswer('q4', this)">Accept and remain composed</button>
-            <p id="result-q4">-multiple choice-</p>
-            <br>
-            <hr>
-        </div>
-
-        <div class="question" id="q5">
-            <h2 class="heading">5. What describes your communication style?</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q5', this)">Direct and assertive</button>
-            <button data-answer="b" onclick="recordAnswer('q5', this)">Enthusiastic and talkative</button>
-            <button data-answer="c" onclick="recordAnswer('q5', this)">Thoughtful and detailed</button>
-            <button data-answer="d" onclick="recordAnswer('q5', this)">Calm and easy-going</button>
-            <p id="result-q5">-multiple choice-</p>
-            <br>
-            <br>
-            <hr>
-        </div>
-
-        <div class="question" id="q6">
-            <h2 class="heading">6. When faced with a problem, you:</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q6', this)">Take initiative and solve it</button>
-            <button data-answer="b" onclick="recordAnswer('q6', this)">Seek advice and share ideas</button>
-            <button data-answer="c" onclick="recordAnswer('q6', this)">Analyze every aspect before deciding</button>
-            <button data-answer="d" onclick="recordAnswer('q6', this)">Procrastinate until last minute</button>
-            <p id="result-q6">-multiple choice-</p>
-            <br>
-            <hr>
-        </div>
-
-        <div class="question" id="q7">
-            <h2 class="heading">7. Your ideal vacation would be:</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q7', this)">A challenging adventure</button>
-            <button data-answer="b" onclick="recordAnswer('q7', this)">A lively and social getaway</button>
-            <button data-answer="c" onclick="recordAnswer('q7', this)">A culturally enriching trip</button>
-            <button data-answer="d" onclick="recordAnswer('q7', this)">A relaxing and serene retreat</button>
-            <p id="result-q7">-multiple choice-</p>
-            <br>
-            <hr>
-        </div>
-
-        <div class="question" id="q8">
-            <h2 class="heading">8. How do you handle criticism?</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q8', this)">Defend your position strongly</button>
-            <button data-answer="b" onclick="recordAnswer('q8', this)">Laugh it off and move on</button>
-            <button data-answer="c" onclick="recordAnswer('q8', this)">Take it to heart and reflect</button>
-            <button data-answer="d" onclick="recordAnswer('q8', this)">Brush it off or consider it</button>
-            <p id="result-q8">-multiple choice-</p>
-            <br>
-            <hr>
-        </div>
-
-        <div class="question" id="q9">
-            <h2 class="heading">9. What motivates you the most?</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q9', this)">Achieving recognition</button>
-            <button data-answer="b" onclick="recordAnswer('q9', this)">Your Friends/Family</button>
-            <button data-answer="c" onclick="recordAnswer('q9', this)">The process itself</button>
-            <button data-answer="d" onclick="recordAnswer('q9', this)">Maintaining peace or stability</button>
-            <p id="result-q9">-multiple choice-</p>
-            <br>
-            <hr>
-        </div>
-
-        <div class="question" id="q10">
-            <h2 class="heading">10. How do you approach new tasks or projects?</h2>
-            <div class="tempimage"></div>
-            <button data-answer="a" onclick="recordAnswer('q10', this)">With determination</button>
-            <button data-answer="b" onclick="recordAnswer('q10', this)">With enthusiasm</button>
-            <button data-answer="c" onclick="recordAnswer('q10', this)">With careful planning</button>
-            <button data-answer="d" onclick="recordAnswer('q10', this)">With a steady hand</button>
-            <p id="result-q10">-multiple choice-</p>
-            <br>
-            <hr>
-        </div>
-
-        <div>
-            <p class="submit">0/10 questions answered</p>
-            <button onclick="submitAnswers()">Submit Answers</button>
-        </div>
-    </section>
-
-    <article>
-        <h1 class="heading">Advertisements</h1>
-        <hr>
-
-        <div class="placeholder">
-            <p>-ad goes here-</p>
-        </div>
-
-        <div class="placeholder">
-            <p>-ad goes here-</p>
-        </div>
-
-        <div class="placeholder">
-            <p>-ad goes here-</p>
-        </div>
-    </article>
+            <div class="placeholder">
+                <p>-ad goes here-</p>
+            </div>
+        </article>
+    </main>
 
     <footer>
         <div id="summary">
             <h3>Digital Quiz App</h3>
-            <div><img src="/images/logo.png" class="logo"></div>
+            <div><img src="images/logo.png" class="logo"></div>
             <p>
                 Your no-nonsense quick stop for Quizzes! We bring you a wide variety of quizzes to suit every interest. Take a moment to learn more about yourself or just unwind with our carefully curated content.
             </p>
@@ -212,7 +214,7 @@
 
         <div id="call-to-action">
             <h3>Want More?</h3>
-            <p><a href="quizzes.html" class="doormat">Explore More Quizzes</a></p>
+            <p><a href="quizzes/" class="doormat">Explore More Quizzes</a></p>
         </div>
         
         <div id="contact">

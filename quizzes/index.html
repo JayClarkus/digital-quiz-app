@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Quiz App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quizzesStyle.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
@@ -19,18 +19,29 @@
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="/quizzes/about.html">About</a></li>
-            <li><a href="/quizzes/donate.html">Donate</a></li>
-            <li><a href="/quizzes/contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>    
+    </nav>   
 
     <main>
-        <section id="about-section">
-            <h1 class="heading">Your no-nonsense quick stop for Quizzes!</h1>
+        <section>
+            <h1>Quiz Explorer</h1>
             <hr>
-            <div class="tempimage"></div>
-            <p class="about">Welcome to the Digital Quiz App, a platform designed to engage, entertain, and enlighten! Whether you're seeking a fun escape from your daily routine or looking to uncover hidden facets of your personality, we've got something for everyone. Our quizzes are carefully crafted to spark curiosity and provide a personalized experience, with a wide range of topics that cater to diverse interests. We're committed to fostering a vibrant community where creativity and curiosity come together to inspire moments of connection and self-discovery. So, dive in, explore, and let your journey of self-discovery begin!</p>
+            <div class="button-container">
+                <div class="left-buttons">
+                    <button id="button-one" onclick="openLink('personality')"><img src="/images/logo.png" class="logo"> Personality Test</button>
+                    <button id="button-two" onclick="alert('Quiz is still in development, coming soon.')"><img src="/images/logo(usa).png" class="logo"> Which U.S. President Are You?</button>
+                    <button id="button-three" onclick="alert('Quiz is still in development, coming soon.')"><img src="/images/logo(learning).png" class="logo">What Kind of Learner Are You?</button>
+                </div>
+        
+                <div class="right-buttons">
+                    <button id="button-four" onclick="alert('Quiz is still in development, coming soon.')"><img src="/images/logo(seasons).png" class="logo">Which Season Best Represents You?</button>
+                    <button id="button-five" onclick="alert('Quiz is still in development, coming soon.')"><img src="/images/logo(elements).png" class="logo">Which Element Are You Most Connected To?</button>
+                    <button id="button-six" onclick="alert('Quiz is still in development, coming soon.')"><img src="/images/logo(creature).png" class="logo">Which Mythical Creature Are You?</button>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -72,6 +83,6 @@
         </div>
     </footer>
 
-    <script src="myScript.js"></script>
+    <script src="/myScript.js"></script>
 </body>
 </html>
