@@ -511,6 +511,8 @@ body:has(.donate) main > div:nth-child(4) {
 .donate input[type="image"] {
     margin: 0 auto;
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .donate + div {

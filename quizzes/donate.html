@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Quiz App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quizzesStyle.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
@@ -18,21 +18,37 @@
 
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="/quizzes/about.html">About</a></li>
-            <li><a href="/quizzes/donate.html">Donate</a></li>
-            <li><a href="/quizzes/contact.html">Contact</a></li>
+            <li><a href="../">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="donate">Donate</a></li>
+            <li><a href="contact">Contact</a></li>
         </ul>
     </nav>  
 
     <main>
-        <section>
-            <form action="https://www.paypal.com/donate" method="post" target="_top" class="donate">
-                <input type="hidden" name="hosted_button_id" value="MVGNAYHTRCQME" />
+        <div>
+            <h1>Support Our Mission</h1>
+            <hr>
+            <p>Your support helps us continue to provide quality quizzes and improve our platform. Every donation, big or small, makes a difference!</p>
+        </div>
+
+        <div id="donation-options">
+            <section>
+                <form action="https://www.paypal.com/donate" method="post" target="_top" class="donate">
+                    <input type="hidden" name="hosted_button_id" value="MVGNAYHTRCQME" />
                 <input type="image" src="/images/donate.png" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-            </form>            
-        </section>
+                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                </form>            
+            </section>
+
+            <div>
+                <p>OR</p>
+            </div>
+
+            <div>
+                <img src="/images/donate_two.png">
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -47,16 +63,16 @@
         <div id="browse">
             <h3>Browse</h3>
             <nav>
-                <p><a href="index.html" class="doormat">Home</a></p>
-                <p><a href="about.html" class="doormat">About</a></p>
-                <p><a href="donate.html" class="doormat">Donate</a></p>
-                <p><a href="contact.html" class="doormat">Contact</a></p>
+                <p><a href="../" class="doormat">Home</a></p>
+                <p><a href="about" class="doormat">About</a></p>
+                <p><a href="donate" class="doormat">Donate</a></p>
+                <p><a href="contact" class="doormat">Contact</a></p>
             </nav>
         </div>
 
         <div id="call-to-action">
             <h3>Want More?</h3>
-            <p><a href="index.html" class="doormat">Explore More Quizzes</a></p>
+            <p><a href="../" class="doormat">Explore More Quizzes</a></p>
         </div>
         
         <div id="contact">

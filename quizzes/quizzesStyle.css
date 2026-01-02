@@ -515,3 +515,134 @@ footer {
     white-space: nowrap;
     border-width: 0;
 }
+/* ========================================
+   Donate Section
+   ======================================== */
+body:has(.donate) main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-lg);
+}
+
+body:has(.donate) main > div:first-child {
+    width: 100%;
+    max-width: var(--max-width-content);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+body:has(.donate) main > section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body:has(.donate) main > div:nth-child(3),
+body:has(.donate) main > div:nth-child(4) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.donate {
+    margin: var(--spacing-xl) auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.donate img,
+.donate input[type="image"] {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.donate + div {
+    margin: var(--spacing-lg) auto;
+    text-align: center;
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.donate + div + div {
+    margin: var(--spacing-xl) auto;
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.donate + div + div img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate + div + div img:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   Donation Page Styles
+   ======================================== */
+#donation-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+    background-color: rgb(255, 255, 255);
+    padding: var(--spacing-xl);
+    outline: #000000 0.125rem solid;
+    border-radius: var(--border-radius-md);
+}
+
+#donation-options > section,
+#donation-options > div {
+    flex: 0 1 auto;
+}
+
+/* Stylized OR separator */
+#donation-options > div:has(p) p {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: var(--spacing-xs);
+    position: relative;
+}
+
+#donation-options > div:has(p) p::before,
+#donation-options > div:has(p) p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+    height: 0.125rem;
+    background: linear-gradient(90deg, transparent, var(--color-tertiary), transparent);
+}
+
+#donation-options > div:has(p) p::before {
+    right: 100%;
+    margin-right: 0.5rem;
+}
+
+#donation-options > div:has(p) p::after {
+    left: 100%;
+    margin-left: 0.5rem;
+}
