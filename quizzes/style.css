@@ -175,11 +175,13 @@ footer {
     display: block;
 }
 
+/* ========================================
+   Contact Form
+   ======================================== */
 #contact-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -211,14 +213,11 @@ footer {
     max-width: 500px;
 }
 
-.contact-left-title {
-    width: 100%;
-}
-
-.contact-left-title hr {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+.contact-text {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+    line-height: 1.6;
 }
 
 .contact-input {
