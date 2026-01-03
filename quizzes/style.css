@@ -3,14 +3,68 @@
     font-family: Verdana, sans-serif;
 }
 
+/* ========================================
+   CSS Variables for Consistent Theming
+   ======================================== */
+:root {
+    --color-primary: rgb(39, 73, 98);
+    --color-secondary: rgb(60, 65, 70);
+    --color-tertiary: rgb(150, 160, 175);
+    --color-background: rgb(242, 252, 255);
+    --color-text: #333;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-accent: deepskyblue;
+    --color-skyblue: skyblue;
+    --color-darkblue: darkblue;
+    
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    
+    --border-radius-sm: 0.5rem;
+    --border-radius-md: 0.9375rem;
+    --border-radius-lg: 1.25rem;
+    --border-radius-full: 3.125rem;
+    
+    --max-width-content: 75rem;
+    --max-width-section: 50rem;
+}
+
+
 body {
     text-align: center;
     margin: 0;
     background-color: rgb(242, 252, 255);
 }
 
-h1 {
-    font-size: 32px;
+main {
+    width: 100%;
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+main > h1,
+main > hr,
+main > div {
+    width: 100%;
+    max-width: var(--max-width-section);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    height: 0.3125rem;
+    background-color: var(--color-primary);
+    border: none;
+    margin: var(--spacing-xs) 0;
 }
 
 #special-h {
@@ -20,11 +74,6 @@ h1 {
 
 .heading {
     text-align: center;
-}
-
-hr {
-    height: 5px;
-    background-color: rgb(39, 73, 98);
 }
 
 header {
@@ -498,4 +547,73 @@ button.selected {
     height: 200px;
     padding-top: 15px;
     border-radius: 20px;
+}
+
+/* ========================================
+   Contact Form
+   ======================================== */
+#contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width-section);
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 31.25rem;
+}
+
+.contact-left-title {
+    width: 100%;
+}
+
+.contact-left-title hr {
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+.contact-input {
+    width: 100%;
+    max-width: 25rem;
+    min-height: 3.125rem;
+    border: 2px solid #ccc;
+    outline: none;
+    padding: 0 var(--spacing-md);
+    font-weight: 500;
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-base);
+    transition: border 0.3s ease;
+}
+
+.contact-left textarea {
+    min-height: 8.75rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    resize: vertical;
+}
+
+.contact-input:focus {
+    border: 3px solid var(--color-primary);
+    outline: 2px solid var(--color-accent);
+}
+
+#content-button {
+    align-self: center;
+    margin-left: 0;
 }
