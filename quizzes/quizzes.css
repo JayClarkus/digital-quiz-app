@@ -1,6 +1,9 @@
 /* ========================================
-   Digital Quiz App - Quiz Explorer Stylesheet
+   Digital Quiz App - Combined Stylesheet
    ========================================
+   
+   This file combines style.css and quizzesStyle.css
+   from the quizzes folder.
    
    Modern, responsive CSS using:
    - CSS Custom Properties (variables)
@@ -42,12 +45,14 @@
     --border-radius-sm: 0.5rem;
     --border-radius-md: 0.9375rem;
     --border-radius-lg: 1.25rem;
+    --border-radius-full: 3.125rem;
     
     --max-width-content: 75rem;
+    --max-width-section: 50rem;
 }
 
 /* ========================================
-   Base Styles
+   Base Styles & Reset
    ======================================== */
 * {
     box-sizing: border-box;
@@ -96,6 +101,10 @@ img {
 #special-h {
     font-size: clamp(1.75rem, 5vw, 2.25rem);
     font-weight: bold;
+}
+
+.heading {
+    text-align: center;
 }
 
 hr {
@@ -170,10 +179,21 @@ header {
    Main Content Layout
    ======================================== */
 main {
-    display: flex;
+    display: block;
     flex: 1;
     width: 100%;
+    max-width: var(--max-width-content);
     margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+main > h1,
+main > hr,
+main > div {
+    width: 100%;
+    max-width: var(--max-width-section);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section {
@@ -182,6 +202,49 @@ section {
     margin: 0 auto;
     max-width: var(--max-width-content);
     width: 100%;
+}
+
+article {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   Aside Section (Sidebar)
+   ======================================== */
+aside {
+    flex: 0 0 25%;
+    padding: 10px;
+    text-align: left;
+    padding-left: 0px;
+}
+
+#aside-content {
+    display: block;
+}
+
+#aside-section.collapsed #aside-content {
+    display: none;
+}
+
+.aside-toggle-button {
+    display: none;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 10px;
+    width: 15%;
+}
+
+.aside-toggle-button:hover {
+    background-color: #555;
+}
+
+.aside-toggle-button img {
+    width: 30px;
+    height: 30px;
 }
 
 /* ========================================
@@ -214,7 +277,7 @@ button {
     color: var(--color-white);
     border-radius: var(--border-radius-md);
     cursor: pointer;
-    border: none;
+    border: 2px solid #333;
     padding: var(--spacing-md);
     width: 100%;
     min-height: 7.5rem;
@@ -225,6 +288,9 @@ button {
     transition: all 0.3s ease;
     font-weight: 600;
     text-align: center;
+    margin: 5px;
+    min-width: 160px;
+    max-width: 100%;
 }
 
 button:hover,
@@ -253,6 +319,10 @@ button img {
     flex-shrink: 0;
 }
 
+.submit {
+    font-size: 24px;
+}
+
 /* Individual Button Colors */
 #button-one {
     background-color: var(--color-primary);
@@ -279,9 +349,312 @@ button img {
 }
 
 /* ========================================
+   Quiz Results
+   ======================================== */
+#result-q1, #result-q2, #result-q3, #result-q4, #result-q5, 
+#result-q6, #result-q7, #result-q8, #result-q9, #result-q10 {
+    font-size: 24px;
+}
+
+/* ========================================
+   Images and Placeholders
+   ======================================== */
+.placeholder {
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    border: 5px solid var(--color-tertiary);
+    margin: 10px;
+    background-color: var(--color-tertiary);
+}
+
+.tempimage {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border: 5px solid var(--color-black);
+    margin: 10px auto;
+    background-color: var(--color-white);
+}
+
+/* ========================================
+   Links
+   ======================================== */
+.hyperlink {
+    padding: 5px;
+    text-align: left;
+}
+
+.hyperlink:hover {
+    color: var(--color-accent);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.doormat {
+    color: rgb(232, 234, 237);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.doormat:hover,
+.doormat:focus {
+    font-weight: bold;
+    color: var(--color-black);
+    outline: none;
+}
+
+/* ========================================
+   About Section
+   ======================================== */
+.about {
+    text-align: left;
+    line-height: 1.8;
+}
+
+#about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* ========================================
+   Donate Section
+   ======================================== */
+body:has(.donate) main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-lg);
+}
+
+body:has(.donate) main > div:first-child {
+    width: 100%;
+    max-width: var(--max-width-content);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+body:has(.donate) main > section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body:has(.donate) main > div:nth-child(3),
+body:has(.donate) main > div:nth-child(4) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.donate {
+    margin: var(--spacing-xl) auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.donate img,
+.donate input[type="image"] {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.donate + div {
+    margin: var(--spacing-lg) auto;
+    text-align: center;
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.donate + div + div {
+    margin: var(--spacing-xl) auto;
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.donate + div + div img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate + div + div img:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   Donation Page Styles
+   ======================================== */
+#donation-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+    background-color: rgb(255, 255, 255);
+    padding: var(--spacing-xl);
+    outline: var(--color-black) 0.125rem solid;
+    border-radius: var(--border-radius-md);
+}
+
+#donation-options > section,
+#donation-options > div {
+    flex: 0 1 auto;
+}
+
+/* Stylized OR separator */
+#donation-options > div:has(p) p {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: var(--spacing-xs);
+    position: relative;
+}
+
+#donation-options > div:has(p) p::before,
+#donation-options > div:has(p) p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+    height: 0.125rem;
+    background: linear-gradient(90deg, transparent, var(--color-tertiary), transparent);
+}
+
+#donation-options > div:has(p) p::before {
+    right: 100%;
+    margin-right: 0.5rem;
+}
+
+#donation-options > div:has(p) p::after {
+    left: 100%;
+    margin-left: 0.5rem;
+}
+
+/* ========================================
+   Contact Form
+   ======================================== */
+#contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    gap: 0;
+    overflow-x: hidden;
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-left-title {
+    width: 100%;
+}
+
+.contact-left-title hr {
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+.contact-text {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+.contact-input {
+    width: 100%;
+    max-width: 400px;
+    min-height: 50px;
+    border: 2px solid #ccc;
+    outline: none;
+    padding: 0 25px;
+    font-weight: 500;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.contact-left textarea {
+    min-height: 140px;
+    padding: 15px 25px;
+    border-radius: 20px;
+    resize: vertical;
+}
+
+.contact-input:focus {
+    border: 3px solid rgb(39, 73, 98);
+    outline: 2px solid deepskyblue;
+}
+
+#content-button {
+    align-self: center;
+    margin-left: 0;
+}
+
+/* Additional overrides for contact section inputs */
+#contact-section .contact-left textarea,
+#contact-section .contact-left input[type="text"],
+#contact-section .contact-left input[type="email"] {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    border: solid 1px #ccc;
+    outline: none;
+}
+
+#contact-section .contact-left textarea {
+    height: 200px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+/* ========================================
    Footer
    ======================================== */
 footer {
+    clear: both;
     border-top: 0.25rem solid var(--color-black);
     background-color: var(--color-tertiary);
     padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 5vw, 6.25rem);
@@ -294,28 +667,42 @@ footer {
     margin-top: auto;
 }
 
-#summary, #call-to-action, #contact, #browse {
-    min-width: 10rem;
-    text-align: left;
-    padding: var(--spacing-sm);
-}
-
 #summary {
     flex: 2 1 15.625rem;
     min-width: 15.625rem;
+    text-align: left;
+    float: left;
+    padding: 10px;
+    padding-right: 80px;
+    padding-left: 20px;
 }
 
 #call-to-action {
     flex: 1 1 10rem;
+    text-align: left;
+    float: left;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 20px;
 }
 
 #browse {
     flex: 1 1 10rem;
+    text-align: left;
+    float: left;
+    padding: 10px;
+    padding-right: 100px;
+    padding-left: 20px;
 }
 
 #contact {
     flex: 1.5 1 12.5rem;
     min-width: 12.5rem;
+    text-align: left;
+    float: left;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 20px;
 }
 
 #email, #phone {
@@ -332,19 +719,6 @@ footer {
     width: clamp(1.5rem, 4vw, 2rem);
     height: clamp(1.5rem, 4vw, 2rem);
     object-fit: contain;
-}
-
-.doormat {
-    color: rgb(232, 234, 237);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.doormat:hover,
-.doormat:focus {
-    font-weight: bold;
-    color: var(--color-black);
-    outline: none;
 }
 
 /* ========================================
@@ -374,8 +748,9 @@ footer {
         flex-direction: column;
     }
 
-    section {
+    aside, section, article {
         width: 100%;
+        text-align: center;
         max-width: 100%;
         padding: var(--spacing-md) var(--spacing-sm);
     }
@@ -385,6 +760,8 @@ footer {
         width: 100%;
         text-align: center;
         padding: var(--spacing-sm);
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .banner {
@@ -398,18 +775,34 @@ footer {
 
     footer {
         flex-direction: column;
-        padding: var(--spacing-lg) var(--spacing-sm);
+        padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 5vw, 6.25rem);
+        padding-bottom: 850px;
+        padding-left: 10px;
+        padding-right: 10px;
         gap: var(--spacing-md);
     }
 
     .navbar ul {
         justify-content: center;
         flex-wrap: wrap;
+        margin-left: 10px;
     }
     
     .navbar a {
         padding: var(--spacing-sm) var(--spacing-xs);
         font-size: 0.875rem;
+    }
+
+    .aside-toggle-button {
+        display: block;
+    }
+
+    #aside-section #aside-content {
+        display: none;
+    }
+
+    #aside-section:not(.collapsed) #aside-content {
+        display: block;
     }
 
     .button-container {
@@ -423,6 +816,62 @@ footer {
     button {
         min-height: 6rem;
         width: 100%;
+    }
+
+    .tempimage {
+        margin-left: 5%;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    #about-section {
+        padding: 15px;
+    }
+
+    .donate {
+        margin: 15px auto;
+        padding: 0;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-form {
+        margin: 0 auto;
+        width: 80%;
+        gap: 10px;
+        transform: scale(0.8);
+        transform-origin: top left;
+        font-size: 1em;
+    }
+
+    .contact-left textarea {
+        height: 120px;
+        padding: 10px 5px;
+    }
+
+    #content-button {
+        margin-left: 25%;
+    }
+
+    .contact-left textarea,
+    .contact-left input[type="text"],
+    .contact-left input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        gap: 20px;
     }
 }
 
@@ -514,135 +963,4 @@ footer {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
-}
-/* ========================================
-   Donate Section
-   ======================================== */
-body:has(.donate) main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--spacing-lg);
-}
-
-body:has(.donate) main > div:first-child {
-    width: 100%;
-    max-width: var(--max-width-content);
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
-}
-
-body:has(.donate) main > section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-body:has(.donate) main > div:nth-child(3),
-body:has(.donate) main > div:nth-child(4) {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.donate {
-    margin: var(--spacing-xl) auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.donate img,
-.donate input[type="image"] {
-    margin: 0 auto;
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.donate + div {
-    margin: var(--spacing-lg) auto;
-    text-align: center;
-    font-size: var(--font-size-xl);
-    font-weight: bold;
-    color: var(--color-primary);
-}
-
-.donate + div + div {
-    margin: var(--spacing-xl) auto;
-    text-align: center;
-    padding: var(--spacing-md);
-}
-
-.donate + div + div img {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius-md);
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.donate + div + div img:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-/* ========================================
-   Donation Page Styles
-   ======================================== */
-#donation-options {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-lg);
-    margin: var(--spacing-xl) 0;
-    background-color: rgb(255, 255, 255);
-    padding: var(--spacing-xl);
-    outline: #000000 0.125rem solid;
-    border-radius: var(--border-radius-md);
-}
-
-#donation-options > section,
-#donation-options > div {
-    flex: 0 1 auto;
-}
-
-/* Stylized OR separator */
-#donation-options > div:has(p) p {
-    font-size: var(--font-size-xl);
-    font-weight: bold;
-    color: var(--color-primary);
-    background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    padding: var(--spacing-xs);
-    position: relative;
-}
-
-#donation-options > div:has(p) p::before,
-#donation-options > div:has(p) p::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 2rem;
-    height: 0.125rem;
-    background: linear-gradient(90deg, transparent, var(--color-tertiary), transparent);
-}
-
-#donation-options > div:has(p) p::before {
-    right: 100%;
-    margin-right: 0.5rem;
-}
-
-#donation-options > div:has(p) p::after {
-    left: 100%;
-    margin-left: 0.5rem;
 }
