@@ -233,14 +233,15 @@
         }
         
         function shareOnTwitter() {
-            const text = "I just took the personality test and I'm a Phlegmatic (The Peacemaker)! 🟢 Find out your personality type:";
+            const text = "I just took the personality test and I'm a Phlegmatic! 🟢 Calm, reliable, and diplomatic. Find out your personality type:";
             const url = window.location.origin + window.location.pathname.replace('phlegmatic.html', 'index.html');
             window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
         }
         
         function shareOnFacebook() {
             const url = window.location.origin + window.location.pathname.replace('phlegmatic.html', 'index.html');
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+            const text = "I just took the personality test and I'm a Phlegmatic! 🟢 Calm, reliable, and diplomatic. Find out your personality type!";
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`, '_blank');
         }
         
         function copyLink() {
