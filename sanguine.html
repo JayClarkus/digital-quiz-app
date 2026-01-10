@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanguine - Personality Test Result</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        .result-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #ffd43b 0%, #fab005 100%);
+            border-radius: 1.25rem;
+            color: #333;
+            box-shadow: 0 10px 30px rgba(250, 176, 5, 0.3);
+        }
+        
+        .result-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .result-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .result-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+        
+        .result-content {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 2rem;
+            border-radius: 0.9375rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .result-content h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #333;
+        }
+        
+        .result-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        
+        .traits-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .traits-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        
+        .traits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #333;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: #333;
+            color: #ffd43b;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .share-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            background: rgba(51, 51, 51, 0.3);
+            color: #333;
+            border: 2px solid #333;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .share-button:hover {
+            background: #fab005;
+            border-color: #fab005;
+            color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(250, 176, 5, 0.5);
+        }
+        
+        .share-options {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(51, 51, 51, 0.15);
+            border-radius: 15px;
+        }
+        
+        .share-options.active {
+            display: block;
+        }
+        
+        .share-link {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #333;
+            color: #ffd43b;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .share-link:hover {
+            transform: scale(1.05);
+            background: #fab005;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="banner">
+            <img src="images/logo.png" class="logo">
+            <h1 class="heading">PERSONALITY TEST</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="donate">Donate</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="result-container">
+            <div class="result-header">
+                <h1 class="result-title">Sanguine</h1>
+                <p class="result-subtitle">The Enthusiast</p>
+            </div>
+            
+            <div class="result-content">
+                <h2>Your Personality Type</h2>
+                <p>
+                    You are a <strong>Sanguine</strong> personality type! Sanguines are energetic, enthusiastic, 
+                    and social individuals who bring joy and excitement wherever they go. You're optimistic, 
+                    spontaneous, and have a natural ability to connect with others. Your vibrant personality 
+                    and positive attitude make you the life of the party.
+                </p>
+                
+                <h2>Key Traits</h2>
+                <ul class="traits-list">
+                    <li>Outgoing and sociable</li>
+                    <li>Enthusiastic and energetic</li>
+                    <li>Optimistic and cheerful</li>
+                    <li>Spontaneous and fun-loving</li>
+                    <li>Charismatic and persuasive</li>
+                    <li>Creative and imaginative</li>
+                    <li>Friendly and warm</li>
+                    <li>Adventurous and open to new experiences</li>
+                </ul>
+                
+                <h2>Strengths</h2>
+                <p>
+                    Your infectious enthusiasm and positive energy naturally draw people to you. You excel at 
+                    motivating others and creating a fun, engaging atmosphere. Your ability to see the bright 
+                    side of situations and your genuine interest in people make you an excellent communicator 
+                    and a cherished friend. Your creativity and spontaneity keep life exciting.
+                </p>
+                
+                <h2>Growth Opportunities</h2>
+                <p>
+                    While your enthusiasm is wonderful, remember to follow through on commitments and pay 
+                    attention to details. Developing more focus and discipline can help you turn your exciting 
+                    ideas into reality. Learning to listen more deeply can strengthen your already strong 
+                    relationships.
+                </p>
+                
+                <div class="button-container">
+                    <a href="index" class="back-button">Take Quiz Again</a>
+                    <br>
+                    <button class="share-button" onclick="toggleShare()">Share My Results 🔗</button>
+                    <div id="shareOptions" class="share-options">
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem; color: #333;">Share your Sanguine personality result!</p>
+                        <a href="#" onclick="shareOnFacebook(); return false;" class="share-link">Share on Facebook</a>
+                        <a href="#" onclick="shareOnTwitter(); return false;" class="share-link">Share on Twitter</a>
+                        <a href="#" onclick="copyLink(); return false;" class="share-link">Copy Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleShare() {
+            const shareOptions = document.getElementById('shareOptions');
+            shareOptions.classList.toggle('active');
+        }
+        
+        function shareOnTwitter() {
+            const text = "I just took the personality test and I'm a Sanguine (The Enthusiast)! 🟡 Find out your personality type:";
+            const url = window.location.origin + window.location.pathname.replace('sanguine.html', 'index.html');
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        }
+        
+        function shareOnFacebook() {
+            const url = window.location.origin + window.location.pathname.replace('sanguine.html', 'index.html');
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+        }
+        
+        function copyLink() {
+            const url = window.location.origin + window.location.pathname.replace('sanguine.html', 'index.html');
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Link copied to clipboard! Share it with your friends.');
+            }).catch(() => {
+                prompt('Copy this link:', url);
+            });
+        }
+    </script>
+
+    <footer>
+        <div>
+            <p>&copy; 2026 Digital Quiz App. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

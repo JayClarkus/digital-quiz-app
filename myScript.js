@@ -79,7 +79,15 @@ function submitAnswers() {
         finalAnswer = topAnswers[randomIndex];
     }
 
-    alert(`Results:\nA: ${answerCount.a}\nB: ${answerCount.b}\nC: ${answerCount.c}\nD: ${answerCount.d}\n\nHighest scoring answer: ${finalAnswer.toUpperCase()}`);
+    // Navigate to the appropriate result page
+    const resultPages = {
+        a: 'choleric.html',
+        b: 'sanguine.html',
+        c: 'melancholy.html',
+        d: 'phlegmatic.html'
+    };
+
+    window.location.href = resultPages[finalAnswer];
 }
 
 function toggleAside() {
