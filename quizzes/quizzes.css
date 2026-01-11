@@ -560,11 +560,9 @@ body:has(.donate) main > div:nth-child(4) {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: var(--max-width-section);
     margin: 0 auto;
-    padding: 0;
-    gap: 0;
-    overflow-x: hidden;
+    padding: var(--spacing-lg) 0;
 }
 
 .contact-form {
@@ -579,9 +577,9 @@ body:has(.donate) main > div:nth-child(4) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: var(--spacing-md);
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25rem;
 }
 
 .contact-left-title {
@@ -603,21 +601,21 @@ body:has(.donate) main > div:nth-child(4) {
 
 .contact-input {
     width: 100%;
-    max-width: 400px;
-    min-height: 50px;
+    max-width: 25rem;
+    min-height: 3.125rem;
     border: 2px solid #ccc;
     outline: none;
-    padding: 0 25px;
+    padding: 0 var(--spacing-md);
     font-weight: 500;
-    border-radius: 50px;
-    font-size: 16px;
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-base);
     transition: border 0.3s ease;
 }
 
 .contact-left textarea {
-    min-height: 140px;
-    padding: 15px 25px;
-    border-radius: 20px;
+    min-height: 8.75rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-lg);
     resize: vertical;
 }
 
@@ -631,24 +629,7 @@ body:has(.donate) main > div:nth-child(4) {
     margin-left: 0;
 }
 
-/* Additional overrides for contact section inputs */
-#contact-section .contact-left textarea,
-#contact-section .contact-left input[type="text"],
-#contact-section .contact-left input[type="email"] {
-    width: 100%;
-    height: 50px;
-    padding: 15px;
-    border-radius: 50px;
-    font-size: 16px;
-    border: solid 1px #ccc;
-    outline: none;
-}
-
-#contact-section .contact-left textarea {
-    height: 200px;
-    padding-top: 15px;
-    border-radius: 20px;
-}
+/* Additional overrides removed - consolidated above */
 
 /* ========================================
    Footer
@@ -671,38 +652,32 @@ footer {
     flex: 2 1 15.625rem;
     min-width: 15.625rem;
     text-align: left;
-    float: left;
-    padding: 10px;
-    padding-right: 80px;
-    padding-left: 20px;
+    padding: var(--spacing-sm);
 }
 
 #call-to-action {
     flex: 1 1 10rem;
+    min-width: 10rem;
     text-align: left;
-    float: left;
-    padding: 10px;
-    padding-right: 10px;
-    padding-left: 20px;
+    padding: var(--spacing-sm);
 }
 
 #browse {
     flex: 1 1 10rem;
+    min-width: 10rem;
     text-align: left;
-    float: left;
-    padding: 10px;
-    padding-right: 100px;
-    padding-left: 20px;
+    padding: var(--spacing-sm);
+}
+
+#browse nav p {
+    margin: var(--spacing-xs) 0;
 }
 
 #contact {
     flex: 1.5 1 12.5rem;
     min-width: 12.5rem;
     text-align: left;
-    float: left;
-    padding: 10px;
-    padding-right: 10px;
-    padding-left: 20px;
+    padding: var(--spacing-sm);
 }
 
 #email, #phone {
@@ -762,6 +737,10 @@ footer {
         padding: var(--spacing-sm);
         padding-left: 5px;
         padding-right: 5px;
+    }
+    
+    #summary .logo {
+        margin: var(--spacing-sm) auto;
     }
 
     .banner {
@@ -842,36 +821,34 @@ footer {
 
     .contact-form {
         margin: 0 auto;
-        width: 80%;
-        gap: 10px;
-        transform: scale(0.8);
-        transform-origin: top left;
-        font-size: 1em;
+        width: 100%;
+    }
+    
+    .contact-left {
+        width: 100%;
+        align-items: stretch;
     }
 
     .contact-left textarea {
-        height: 120px;
-        padding: 10px 5px;
+        min-height: 7.5rem;
+        padding: var(--spacing-sm);
     }
 
     #content-button {
-        margin-left: 25%;
+        margin-left: 0;
+        width: 100%;
     }
 
-    .contact-left textarea,
-    .contact-left input[type="text"],
-    .contact-left input[type="email"] {
+    .contact-input {
         width: 100%;
-        padding: 10px;
-        font-size: 16px;
+        max-width: 100%;
+        padding: var(--spacing-sm);
+        font-size: 1rem;
     }
 
     #contact-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-        gap: 20px;
+        padding: var(--spacing-md) var(--spacing-sm);
+        gap: var(--spacing-md);
     }
 }
 
