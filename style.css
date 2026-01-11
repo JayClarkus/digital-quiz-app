@@ -106,7 +106,7 @@ hr {
     height: 0.3125rem;
     background-color: var(--color-primary);
     border: none;
-    margin: var(--spacing-xs) 0;
+    margin: var(--spacing-md) 0;
 }
 
 /* ========================================
@@ -405,6 +405,7 @@ button.selected {
     width: 100%;
     max-width: var(--max-width-section);
     margin: 0 auto;
+    padding: var(--spacing-lg) 0;
 }
 
 .contact-form {
@@ -432,6 +433,13 @@ button.selected {
     width: 100%;
     max-width: 25rem;
     margin: 0 auto;
+}
+
+.contact-text {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+    line-height: 1.6;
 }
 
 .contact-input {
@@ -462,6 +470,29 @@ button.selected {
 #content-button {
     align-self: center;
     margin-left: 0;
+}
+
+/* Contact page button styling */
+#contact-section button {
+    color: var(--color-white);
+    padding: var(--spacing-md);
+    width: 100%;
+    min-height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    font-weight: 600;
+    text-align: center;
+    margin: 5px;
+    min-width: 160px;
+    max-width: 100%;
+}
+
+#contact-section button:hover,
+#contact-section button:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* ========================================
