@@ -81,10 +81,10 @@ function submitAnswers() {
 
     // Navigate to the appropriate result page
     const resultPages = {
-        a: 'choleric.html',
-        b: 'sanguine.html',
-        c: 'melancholy.html',
-        d: 'phlegmatic.html'
+        a: 'choleric',
+        b: 'sanguine',
+        c: 'melancholy',
+        d: 'phlegmatic'
     };
 
     window.location.href = resultPages[finalAnswer];
@@ -105,7 +105,7 @@ function toggleAside() {
 
 function openLink(link) {
     if (link === 'personality') {
-        window.open("/index.html", "_self");
+        window.open("/", "_self");
     }
 }
 
