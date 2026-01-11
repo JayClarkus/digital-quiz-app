@@ -114,5 +114,3 @@ document.getElementById('aside-toggle').addEventListener('click', toggleAside);
 initializeAsideState();
 
 window.addEventListener('resize', initializeAsideState);
-
-alert("Website is still in development, some features may not function yet.");
